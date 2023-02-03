@@ -32,6 +32,14 @@ const galleryImgBox = document.querySelector('.gallery');
 
 galleryImgBox.addEventListener('click', onGalleryImgClick);
 
+// Ініціалізація бібліотеки після створення і додання елементів галереї
+// Додаємо відображення підписів до зображень з атрибута alt
+
+let lightbox = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
+  captionsData: 'title',
+});
+
 function onGalleryImgClick(e) {
   e.preventDefault();
   if (e.target.nodeName !== 'IMG') {
@@ -40,16 +48,9 @@ function onGalleryImgClick(e) {
 
   // const selectedImg = e.target.title;
   // console.log(selectedImg);
-
-  // Ініціалізація бібліотеки після створення і додання елементів галереї
-  // Додаємо відображення підписів до зображень з атрибута alt
-
-  let lightbox = new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-    captionsData: 'title',
-    // captionPosition: 'bottom',
-  });
 };
+
+
 
 
 

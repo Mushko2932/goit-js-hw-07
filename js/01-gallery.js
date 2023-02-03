@@ -46,10 +46,6 @@ function onGalleryItemsClick(e) {
   if (e.target.nodeName !== 'IMG') {
     return;
   };
-  // const imgEl = e.target;
-  // const parentItem = imgEl.closest('.gallery__item');
-  // parentItem.classList.add('.gallery__link');
-  // console.log(e.target.nodeName);
 
   const selectedItem = e.target.getAttribute('data-source');
 
